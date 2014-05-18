@@ -22,12 +22,13 @@ histData<-sqldf("Select date,sum(steps) steps from cleanedData group by date")
 qplot(date,steps,data=histData,geom="histogram") + xlab("Date(s)") + ylab("Total Steps") + ggtitle("Total number of steps taken each day")
 
 #calculate the mean and median total number of steps taken per day
+options(scipen = 999)
 meanStep = mean(histData$steps)
 medianStep = median(histData$steps)
-
-#The __mean__ total number of steps taken per day: _`r meanStep`_
-#The __median__ total number of steps taken per day: _`r medianStep`_
 ```
+* The __mean__ total number of steps taken per day: _`r meanStep`_
+* The __median__ total number of steps taken per day: _`r medianStep`_
+
 ## What is the average daily activity pattern?
 
 ```{r echo=TRUE}

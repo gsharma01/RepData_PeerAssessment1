@@ -227,12 +227,15 @@ qplot(date, steps, data = histData, geom = &quot;histogram&quot;) + xlab(&quot;D
 
 <pre><code class="r">
 # calculate the mean and median total number of steps taken per day
+options(scipen = 999)
 meanStep = mean(histData$steps)
 medianStep = median(histData$steps)
-
-# The __mean__ total number of steps taken per day: _`r meanStep`_ The
-# __median__ total number of steps taken per day: _`r medianStep`_
 </code></pre>
+
+<ul>
+<li>The <strong>mean</strong> total number of steps taken per day: <em>10766.1887</em></li>
+<li>The <strong>median</strong> total number of steps taken per day: <em>10765</em></li>
+</ul>
 
 <h2>What is the average daily activity pattern?</h2>
 
@@ -314,12 +317,12 @@ medianStepNew &lt;- median(sumStepNew$steps)
 <h3>After filling the missing values</h3>
 
 <ul>
-<li>The <strong>mean</strong> total number of steps taken per day: <em>1.0766 &times; 10<sup>4</sup></em></li>
-<li>The <strong>median</strong> total number of steps taken per day: <em>1.0766 &times; 10<sup>4</sup></em></li>
+<li>The <strong>mean</strong> total number of steps taken per day: <em>10766.1887</em></li>
+<li>The <strong>median</strong> total number of steps taken per day: <em>10766.1887</em></li>
 </ul>
 
-<p>The mean number of steps taken per day are the same (1.0766 &times; 10<sup>4</sup>). 
-But, the median number of steps taken per day are slightly different (before filling missing data: 10765, after filling missing data: 1.0766 &times; 10<sup>4</sup>). It is probably due to filling missing values by the mean of 5 minute interval.</p>
+<p>The mean number of steps taken per day are the same (10766.1887). 
+But, the median number of steps taken per day are slightly different (before filling missing data: 10765, after filling missing data: 10766.1887). It is probably due to filling missing values by the mean of 5 minute interval.</p>
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
