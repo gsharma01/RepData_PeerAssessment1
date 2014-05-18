@@ -9,7 +9,7 @@ library(sqldf)
 
 
 #Assume the activity.csv was placed at the same directory as this Rmarkdown file.  
-monitoringData<- read.csv("repdata-data-activity\\activity.csv")
+monitoringData<- read.csv("activity.csv")
 cleanedData <- sqldf("Select * from monitoringData where steps is not null")
 ```
 
